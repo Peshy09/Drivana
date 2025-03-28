@@ -1,0 +1,143 @@
+.navbar {
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo {
+  text-decoration: none;
+}
+
+.logo-text {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #2c3e50;
+  letter-spacing: 1px;
+}
+
+.navbar-menu {
+  display: flex;
+  gap: 1.5rem;
+  margin: 0 2rem;
+}
+
+.navbar-link {
+  color: #2c3e50;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+}
+
+.navbar-link i {
+  font-size: 1.1rem;
+}
+
+.navbar-link:hover {
+  background-color: #f8f9fa;
+  color: #3498db;
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.profile-link {
+  color: #2c3e50;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+}
+
+.profile-link:hover {
+  background-color: #f8f9fa;
+  color: #3498db;
+}
+
+.logout-button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+}
+
+.logout-button:hover {
+  background-color: #c0392b;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .navbar-menu {
+    gap: 1rem;
+  }
+  
+  .navbar-link {
+    padding: 0.5rem 0.8rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .navbar {
+    padding: 1rem;
+  }
+  
+  .navbar-menu {
+    display: none;
+  }
+  
+  .navbar-actions {
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .logo-text {
+    font-size: 1.5rem;
+  }
+  
+  .profile-link span,
+  .logout-button span {
+    display: none;
+  }
+  
+  .profile-link,
+  .logout-button {
+    padding: 0.5rem;
+  }
+}

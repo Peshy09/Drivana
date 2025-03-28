@@ -1,0 +1,255 @@
+.review-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background-color: #f4f4f4;
+  min-height: calc(100vh - 80px); /* Increased spacing for navbar */
+  margin-top: 80px; /* Increased margin to prevent overlap */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Remove top margin when in dashboard view */
+.review-container.dashboard-view {
+  margin-top: 0;
+  min-height: 100vh;
+  margin-left: 250px; /* Match dashboard sidebar width */
+  width: calc(100% - 250px);
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.review-header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.review-main {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.review-form-section,
+.reviews-list-section {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+.review-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.rating-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.stars {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.star-filled {
+  color: #ffd700;
+  cursor: pointer;
+}
+
+.star-empty {
+  color: #ccc;
+  cursor: pointer;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-weight: 600;
+}
+
+.form-group textarea {
+  min-height: 100px;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.submit-button {
+  padding: 0.75rem 1.5rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+.submit-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.review-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.review-item {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
+  background-color: #fff;
+}
+
+.customer-photo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.default-user-icon {
+  width: 50px;
+  height: 50px;
+  color: #ccc;
+}
+
+.review-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.review-meta h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.review-content {
+  margin-top: 1rem;
+}
+
+.review-date {
+  display: block;
+  color: #666;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.delete-button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.delete-button:hover {
+  background-color: #c82333;
+}
+
+.error-message {
+  color: #dc3545;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #dc3545;
+  border-radius: 4px;
+  background-color: #f8d7da;
+}
+
+.loading {
+  text-align: center;
+  color: #666;
+  padding: 1rem;
+}
+
+.no-reviews {
+  text-align: center;
+  color: #666;
+  padding: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .review-container {
+    margin-top: 60px; /* Adjust for mobile navbar */
+    min-height: calc(100vh - 60px);
+    padding: 1rem;
+  }
+
+  .review-container.dashboard-view {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .review-main {
+    padding: 0.5rem;
+  }
+
+  .review-form-section,
+  .reviews-list-section {
+    padding: 1rem;
+  }
+
+  .review-header h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .review-meta h3 {
+    font-size: 1rem;
+  }
+
+  .stars {
+    font-size: 0.9rem;
+  }
+
+  .review-content p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .review-container {
+    margin: 0;
+    padding: 0;
+    min-height: auto;
+  }
+
+  .review-container.dashboard-view {
+    margin: 0;
+    width: 100%;
+  }
+}

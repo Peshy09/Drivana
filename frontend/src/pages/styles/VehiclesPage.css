@@ -1,0 +1,59 @@
+.vehicles-page-container {
+  display: grid;
+  grid-template-columns: minmax(300px, 1fr) 2fr;
+  gap: 2rem;
+  height: calc(100vh - 60px); /* Subtract navbar height */
+  padding: 2rem;
+  background-color: #f8f9fa;
+}
+
+.vehicles-list-section {
+  overflow-y: auto;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+}
+
+.vehicles-detail-section {
+  overflow-y: auto;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+}
+
+.no-vehicle-selected {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #6c757d;
+  text-align: center;
+  padding: 2rem;
+}
+
+.no-vehicle-selected h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #343a40;
+}
+
+.no-vehicle-selected p {
+  font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .vehicles-page-container {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .vehicles-list-section,
+  .vehicles-detail-section {
+    height: auto;
+    max-height: none;
+  }
+} 

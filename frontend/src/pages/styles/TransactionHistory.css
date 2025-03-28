@@ -1,0 +1,86 @@
+.transaction-history-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background-color: #f4f4f4;
+    min-height: 100vh;
+  }
+  
+  .transaction-history-header {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .transaction-history-header h1 {
+    margin: 0;
+    font-size: 2rem;
+  }
+  
+  .transaction-history-main {
+    width: 100%;
+    max-width: 1200px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .transaction-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .transaction-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .transaction-details {
+    flex: 1;
+  }
+  
+  .transaction-details p {
+    margin: 0.5rem 0;
+  }
+  
+  @media (max-width: 768px) {
+    .transaction-history-container {
+      padding: 1rem;
+    }
+  
+    .transaction-history-header h1 {
+      font-size: 1.5rem;
+    }
+  
+    .transaction-history-main {
+      padding: 1rem;
+    }
+  
+    .transaction-list h2 {
+      font-size: 1.2rem;
+    }
+  
+    .transaction-details p {
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .transaction-history-header h1 {
+      font-size: 1.2rem;
+    }
+  
+    .transaction-list h2 {
+      font-size: 1rem;
+    }
+  
+    .transaction-details p {
+      font-size: 0.8rem;
+    }
+  }
